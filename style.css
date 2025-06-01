@@ -1,0 +1,345 @@
+:root {
+  --darken-green--: #003333;
+  --dark-green--: #005f49;
+  --light-green: #008c60;
+  --lighter-green: #00b876;
+  --white--: #ffffff;
+  --gray: #f5f6fa;
+  --text-dark: #222;
+  --text-light: #666;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--gray);
+  color: var(--text-dark);
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  background: var(--darken-green--);
+  color: var(--white--);
+  padding: 24px 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar nav ul li a {
+  color: var(--white--);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 32px;
+  border-left: 4px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.sidebar nav ul li a.active,
+.sidebar nav ul li a:hover {
+  background: var(--dark-green--);
+  border-left: 4px solid var(--lighter-green);
+}
+
+.sidebar nav ul li .icon-home,
+.sidebar nav ul li .icon-pay,
+.sidebar nav ul li .icon-account,
+.sidebar nav ul li .icon-card,
+.sidebar nav ul li .icon-more {
+  margin-right: 12px;
+}
+
+.sidebar .dropdown-menu {
+  display: none;
+  background: var(--dark-green--);
+  margin-left: 20px;
+  border-radius: 6px;
+  padding: 8px 0;
+}
+
+.sidebar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dashboard-main {
+  margin-left: 220px;
+  padding: 32px 40px 32px 40px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin: 0 0 4px 0;
+}
+
+.dashboard-header p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.notification {
+  position: relative;
+  font-size: 1.3rem;
+}
+
+.notification-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.user-avatar {
+  background: var(--lighter-green);
+  color: var(--white--);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.balance-card {
+  background: linear-gradient(90deg, var(--dark-green--), var(--light-green));
+  color: var(--white--);
+  border-radius: 16px;
+  padding: 32px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.balance-card h2 {
+  font-size: 2.2rem;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.balance-label {
+  font-size: 0.95rem;
+  color: #e0f7ef;
+}
+
+.balance-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.balance-growth {
+  font-size: 0.95rem;
+  color: #b2f2d7;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 18px;
+  margin: 28px 0 18px 0;
+}
+
+.quick-actions button {
+  background: var(--lighter-green);
+  color: var(--white--);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+
+.quick-actions button:hover {
+  background: var(--light-green);
+}
+
+.accounts-summary {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.account-card {
+  background: var(--white--);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 22px 24px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--dark-green--);
+}
+
+.account-number {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.recent-transactions {
+  margin-bottom: 32px;
+}
+
+.recent-transactions h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.recent-transactions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-transactions li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--white--);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 12px 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.amount.credit {
+  color: var(--lighter-green);
+}
+.amount.debit {
+  color: #e74c3c;
+}
+.date {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.favourite-products {
+  margin-bottom: 32px;
+}
+
+.favourite-products h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.products-list {
+  display: flex;
+  gap: 16px;
+}
+
+.product-card {
+  background: var(--white--);
+  border-radius: 8px;
+  padding: 18px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  font-weight: 500;
+  color: var(--dark-green--);
+}
+
+/* Simple SVG icon styles (replace with icon font or SVG sprite for production) */
+.icon-home::before {
+  content: "🏠";
+}
+.icon-pay::before {
+  content: "💸";
+}
+.icon-account::before {
+  content: "🧾";
+}
+.icon-card::before {
+  content: "💳";
+}
+.icon-more::before {
+  content: "⋯";
+}
+.icon-chevron::before {
+  content: "▼";
+}
+.icon-bell::before {
+  content: "🔔";
+}
+.icon-wallet::before {
+  content: "👛";
+}
+.icon-eye-off::before {
+  content: "🙈";
+}
+.icon-eye::before {
+  content: "👁️";
+}
+.icon-piggy::before {
+  content: "🐷";
+}
+.icon-currency::before {
+  content: "💱";
+}
+.icon-transfer::before {
+  content: "🔁";
+}
+.icon-add::before {
+  content: "➕";
+}
+.icon-bill::before {
+  content: "🧾";
+}
+.icon-arrow-down::before {
+  content: "⬇️";
+}
+.icon-arrow-up::before {
+  content: "⬆️";
+}
