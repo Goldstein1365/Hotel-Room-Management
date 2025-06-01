@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard | PayFeed</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-logo">PayFeed</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="dashboard.html" class="active"
+              ><span class="icon-home"></span> Home</a
+            >
+          </li>
+          <li>
+            <a href="payment.html"><span class="icon-pay"></span> Payment</a>
+          </li>
+          <li>
+            <a href="account.html"
+              ><span class="icon-account"></span> Account</a
+            >
+          </li>
+          <li>
+            <a href="card.html"><span class="icon-card"></span> Card</a>
+          </li>
+          <li class="dropdown">
+            <a href="#"
+              ><span class="icon-more"></span> More
+              <span class="icon-chevron"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="deposit.html">Deposit</a></li>
+              <li><a href="loan.html">Loan</a></li>
+              <li><a href="statisics.html">Statistics</a></li>
+              <li><a href="history.html">History</a></li>
+              <li><a href="monthly.html">Monthly Budget</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1>Good Morning, Gospel! <span>👋</span></h1>
+          <p>Welcome back to your financial dashboard</p>
+        </div>
+        <div class="dashboard-header-right">
+          <div class="notification">
+            <span class="icon-bell"></span>
+            <span class="notification-count">3</span>
+          </div>
+          <div class="user-avatar">G</div>
+        </div>
+      </header>
+      <main>
+        <section class="balance-card">
+          <div>
+            <p>Total Balance</p>
+            <h2>₦34,999.75 <span class="icon-eye-off"></span></h2>
+            <span class="balance-label">Available Balance</span>
+          </div>
+          <div class="balance-side">
+            <span class="icon-wallet"></span>
+            <span class="balance-growth">+12.5% from last month</span>
+          </div>
+        </section>
+        <section class="quick-actions">
+          <button><span class="icon-transfer"></span> Transfer</button>
+          <button><span class="icon-add"></span> Add Funds</button>
+          <button><span class="icon-bill"></span> Pay Bills</button>
+        </section>
+        <section class="accounts-summary">
+          <div class="account-card">
+            <div>
+              <p>Savings Account</p>
+              <span class="account-number">****4352</span>
+            </div>
+            <div>
+              <h3>₦25,000.50</h3>
+              <span class="icon-piggy"></span>
+            </div>
+          </div>
+          <div class="account-card">
+            <div>
+              <p>Current Account</p>
+              <span class="account-number">****7891</span>
+            </div>
+            <div>
+              <h3>₦12,500.00</h3>
+              <span class="icon-currency"></span>
+            </div>
+          </div>
+          <div class="account-card">
+            <div>
+              <p>Card Balance</p>
+              <span class="account-number">****1234</span>
+            </div>
+            <div>
+              <h3>₦7,499.25</h3>
+              <span class="icon-card"></span>
+            </div>
+          </div>
+        </section>
+        <section class="recent-transactions">
+          <h2>Recent Transactions</h2>
+          <ul>
+            <li>
+              <span class="icon-arrow-down"></span>
+              <span>Salary</span>
+              <span class="amount credit">+₦15,000.00</span>
+              <span class="date">01 Jun</span>
+            </li>
+            <li>
+              <span class="icon-arrow-up"></span>
+              <span>Electricity Bill</span>
+              <span class="amount debit">-₦5,000.00</span>
+              <span class="date">30 May</span>
+            </li>
+            <li>
+              <span class="icon-arrow-up"></span>
+              <span>Groceries</span>
+              <span class="amount debit">-₦3,200.00</span>
+              <span class="date">29 May</span>
+            </li>
+          </ul>
+        </section>
+        <section class="favourite-products">
+          <h2>Favourite Products</h2>
+          <div class="products-list">
+            <div class="product-card">Airtime Top-up</div>
+            <div class="product-card">Data Bundle</div>
+            <div class="product-card">Cable TV</div>
+            <div class="product-card">Internet</div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
